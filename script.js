@@ -183,3 +183,22 @@ setInterval(() => {
 
 updateClock();
 render();
+
+const weatherEl = document.getElementById("weather");
+const WEATHER_LAT = 37.5665;
+const WEATHER_LON = 126.9780;
+
+async function loadWeather() {
+  try {
+    const res = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${WEATHER_LAT}&lon=${WEATHER_LON}&appid=${WEATHER_API_KEY}&units=metric`
+    );
+    if (!res.ok) throw new Error("weather request failed");
+    const data = await res.json();
+    weatherEl.textContent = `서울 현재 기온: ${Math.round(data.main.temp)}°C`;
+  } catch {
+    weatherEl.textContent = "기온 정보를 불러올 수 없습니다.";
+  }
+}
+
+loadWeather();
