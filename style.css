@@ -9,6 +9,7 @@ body {
   background: linear-gradient(135deg, #6a82fb, #fc5c7d);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
