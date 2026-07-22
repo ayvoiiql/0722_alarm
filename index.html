@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간편 알람</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>⏰ 간편 알람</h1>
+      <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+    <section class="add-alarm">
+      <input type="time" id="alarmTime">
+      <input type="text" id="alarmLabel" placeholder="알람 이름 (선택)">
+      <button id="addBtn">추가</button>
+    </section>
+
+    <section>
+      <ul class="alarm-list" id="alarmList"></ul>
+      <p class="empty" id="emptyMsg">등록된 알람이 없습니다.</p>
+    </section>
+  </div>
+
+  <div class="ring-overlay" id="ringOverlay">
+    <div class="ring-box">
+      <p class="ring-title">⏰ 알람!</p>
+      <p class="ring-label" id="ringLabel"></p>
+      <p class="ring-time" id="ringTime"></p>
+      <div class="ring-actions">
+        <button id="snoozeBtn">5분 후 다시 알림</button>
+        <button id="stopBtn">끄기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
