@@ -28,6 +28,14 @@ header {
   margin-bottom: 20px;
 }
 
+.header-image {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
+}
+
 header h1 {
   font-size: 1.5rem;
   color: #333;
